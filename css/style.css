@@ -2108,6 +2108,17 @@ ul.pagination li.page-item.active .page-link {
     .low-res {
         width: 250px;
     }
+
+}
+
+@media only screen and (max-width: 942px) {
+   
+    .job-info {
+        height: auto !important;
+    }
+    .job-quali {
+        height: auto !important;
+    }
 }
 
 .job-quali {
