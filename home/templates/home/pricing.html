@@ -1,0 +1,196 @@
+{% extends "home/layout.html"%} {% load static%} {% block body %}
+
+<section id="banner_parallax" class="inner_page_banner slide_banner1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="slide_cont">
+            <h2>Pricing</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end header -->
+<!-- section -->
+<section class="layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="full">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="full text_align_center">
+              <div class="heading_main center_head_border heading_style_1">
+                <h2>Get a Quotation</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-xl-6" style="margin: 0 auto;">
+        <div class="full gradiant_bg">
+          <div class="contact_form white_heading_border" id="order-now">
+            <div class=" ">
+              <div
+                class="full_heading heading_main heading_style_1 white_fonts"
+              >
+                <h2>Order Now <span></span></h2>
+              </div>
+              <p>
+                Fill out the form below according to what best suits your
+                requrirment so we can get you started. We strive to respond
+                within 24 working hours.
+              </p>
+              <div class="form_contact">
+                <!-- form -->
+                <form action="{% url 'home:pricing' %}" method="post">
+                  {% csrf_token %}
+                  <fieldset>
+                    <div class="field">
+                      <input
+                        type="text "
+                        name="fname"
+                        placeholder="Your first name "
+                        required=" "
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text "
+                        name="lname"
+                        placeholder="Your last name "
+                        required=" "
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text "
+                        name="cname"
+                        placeholder="Company name "
+                        required=" "
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="text "
+                        name="phone"
+                        placeholder="Your phone Number "
+                        required=" "
+                      />
+                    </div>
+                    <div class="field">
+                      <input
+                        type="email "
+                        name="email"
+                        placeholder=" Work Email Address "
+                        required=" "
+                      />
+                    </div>
+                    <div class="field">
+                      <select
+                        class="form-control"
+                        style="margin-top: 8px;"
+                        name="drop"
+                      >
+                        <option value="none given" disabled selected hidden
+                          >Exepected Checks Per year</option
+                        >
+                        <option value="1-10 per year">1-10 Per year</option>
+                        <option value="11-25 per year">11-25 Per year</option>
+                        <option value="26-50 per year">26-50 Per year</option>
+                        <option value="51-250 per year">51-250 Per year</option>
+                        <option value="251-500 per year"
+                          >251-500 Per year</option
+                        >
+                        <option value="501+ per year">501+ Per year</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <textarea
+                        name="message"
+                        placeholder="Any Message "
+                        required=" "
+                      ></textarea>
+                    </div>
+                    <div class="field">
+                      <button class="field_bt">Send</button>
+                    </div>
+                  </fieldset>
+                </form>
+                <!-- end form -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->
+<!-- section -->
+<section class="layout_padding gradiant_bg cross_layout">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="full text_align_center white_fonts">
+          <div class="heading_main center_head_border heading_style_1">
+            <h2>Our Services</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row app-features">
+      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+        <div class="information_blogs special">
+          <div class="imf_icon">
+            <img src="{% static 'home/images/id-card.png'%}" alt="# " />
+          </div>
+          <div class="imf_head">
+            <h3>Background Check</h3>
+            <a class="white_bt bt_main bt_special" href="# ">Know More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+        <div class="information_blogs special">
+          <div class="imf_icon">
+            <img src="{% static 'home/images/rental.png'%}" alt="# " />
+          </div>
+          <div class="imf_head">
+            <h3>Rental History</h3>
+            <a class="white_bt bt_main bt_special" href="# ">Know More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+        <div class="information_blogs special">
+          <div class="imf_icon">
+            <img src="{% static 'home/images/banking.png'%}" alt="# " />
+          </div>
+          <div class="imf_head">
+            <h3>Banking & Credit</h3>
+            <a class="white_bt bt_main bt_special" href="# ">Know More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+        <div class="information_blogs special">
+          <div class="imf_icon">
+            <img src="{% static 'home/images/folder.png'%}" alt="# " />
+          </div>
+          <div class="imf_head">
+            <h3 style="font-size: 18px;">ID & Driving Records</h3>
+            <a class="white_bt bt_main bt_special" href="# ">Know More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->
+{% endblock%}

@@ -1,0 +1,14 @@
+{% if messages %}
+    {% for message in messages %}
+    <div class="gradiant_bg alert alert-{{ message.tags}} m-2" id="msg" role="alert" style="
+    min-height: 2px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 15px;">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}

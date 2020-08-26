@@ -1,0 +1,147 @@
+
+{% extends "home/layout.html"%}
+{% load static%}
+    
+    
+{% block body %}
+
+
+
+    <section id="banner_parallax" class="inner_page_banner slide_banner1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="slide_cont">
+                            <h2>Careers</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end header -->
+    <!-- section -->
+    <div class="career-padding">
+    <section class="layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="full text_align_center">
+                        <div class="heading_main center_head_border heading_style_1" style="margin: 0;">
+                            <h2> Morrison Records Careers</h2>
+                            <h4>Where you can ﬁnd the job of your dreams.
+
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-stretch">
+                    <div class="information_blogs not special">
+                        <h3>Risk Management Manager</h3>
+                        <div class="sub-icon">#1</div>
+                        <h4 class="job-overview">Overview</h4>
+                        <p class="services_info job-info">The Manager, Risk Management is responsible for the building and coordination of a centralized first-line of defense (LOD1) risk and internal control program efforts for Early Warning’s (specified department or function). The role
+                            will be required to align with the company’s Enterprise Risk Management Leadership around the structure of the 3LOD (three lines of defense) Program to ensure the consistency in the implementation and operationalization across
+                            the enterprise.
+                        </p>
+                        <h4 class="job-overview"> Minimum Qualification</h4>
+                        <p>
+                            <ul class="job-quali">
+                                <li>Education and/or experience typically obtained through completion of a Bachelor’s degree in Business Administration, Finance, Accounting or other related field of specialty.</li>
+                                <li>Minimum of three or more years of audit, operational risk or other risk management experience or other proven related business experience.</li>
+                                <li>Good understanding of risk management and internal control leading practices within specialized area of focus.</li>
+                                <li>Demonstrated ability to work effectively in a complex, highly regulated environment.</li>
+                                
+                            </ul>
+                        </p>
+                        <a class="white_bt bt_main bt_special" href="{% url 'home:apply' %}">Apply</a>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex align-items-stretch">
+                    <div class="information_blogs not special">
+                        <h3>Consumer Services Analyst- Fraud Operations</h3>
+                        <div class="sub-icon">#2</div>
+                        <h4 class="job-overview">Overview</h4>
+                        <p class="services_info job-info">This position will be responsible for identifying, investigating, and mitigating potential fraudulent activity involving users and transactions while on phone calls. The ability to navigate a call that may include fraudulent activity,
+                            technical support, customer support and general information about payment transactions including customer profiles.
+
+
+                        </p>
+                        <h4 class="job-overview"> Minimum Qualification</h4>
+                        <p>
+                            <ul class="job-quali">
+                                <li>High school diploma</li>
+                                <li>Previous experience in a banking or other call center environment</li>
+                                <li>Good problem solving, analytical, research, and investigative skills.</li>
+                                <li>Strong phone skills and a customer service orientation</li>
+                                <li>Ability to work independently and handle large volumes of research cases. </li>
+                                <li>Excellent verbal and written communication skills</li>
+                                <li>Intermediate MS Office skills</li>
+                                <li>Background and drug screen</li>
+                            </ul>
+
+                        </p>
+                        <a class="white_bt bt_main bt_special" href="{% url 'home:apply' %}">Apply</a>
+
+
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
+    <!-- end section -->
+    <!-- section -->
+    <section class="contact_section ">
+        <div class="container-fluid ">
+            <div class="row ">
+                <div class="col-xs-12 col-sm-12 col-md-6 " style="padding:0; ">
+                    <div class="full ">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 " style="padding:0; ">
+                    <div class="full ">
+                        <div class="contact_form white_heading_border ">
+                            <div class="contact_form_inner ">
+                                <div class="full_heading white_fonts heading_main heading_style_1 ">
+                                    <h2>Contact <span>us</span></h2>
+                                </div>
+                                <p>In case of any question or query, fill out the form below and we will be in touch shortly.</p>
+                                <div class="form_contact ">
+                                    <!-- form -->
+                                    <form action="{% url 'home:index' %}" method="post">
+                                        {% csrf_token %}
+                                        <fieldset>
+                                            <div class="field ">
+                                                <input type="text " name="username" placeholder="Your name " required=" " />
+                                            </div>
+                                            <div class="field ">
+                                                <input type="text " name="phone" placeholder="Your phone " required=" " />
+                                            </div>
+                                            <div class="field ">
+                                                <input type="email " name="email" placeholder="Email " required=" " />
+                                            </div>
+                                            <div class="field ">
+                                                <textarea name="message" placeholder="Enter Message" required=" "></textarea>
+                                            </div>
+                                            <div class="field ">
+                                                <button class="field_bt ">Send</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <!-- end form -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+ {% endblock%}
